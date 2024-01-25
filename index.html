@@ -9,8 +9,25 @@
 </head>
 
 <body>
-    <div class="wrapper page-content">
-        <img src="img/page-bg.png" alt="background" class="page-bg">
+    <div class="wrapper ">
+        <div class="page-content">
+            <button class="page-content__item point-M1">
+                <span>M1</span>
+                Apartments
+            </button>
+            <button class="page-content__item point-M2">
+                <span>M2</span>
+                Mansions
+            </button>
+            <button class="page-content__item point-P1">
+                <span>P1</span>
+                Park
+            </button>
+            <button class="page-content__item point-R2">
+                <span>R2</span>
+                Road
+            </button>
+        </div>
         <div class="page-bg-linear-gradient"></div>
 
         <header class="header">
@@ -69,6 +86,8 @@
                     </svg>
                 </div>
             </button>
+            <div class="modal-overlay">
+            </div>
             <div class="brochure-download__form form brochure-download__form--hidden">
                 <div class="form-text">
                     <h2 class="form-text__title title">don't miss <br>
@@ -115,9 +134,12 @@
                     </div>
                 </div>
                 <form action="#" method="post" class="form-fields">
-                    <input class="form__client-name form-fields__item" type="text" id="name" name="client_name" placeholder="Your name">
-                    <input class="form__client-email form-fields__item" type="email" name="email" id="client_email" placeholder="Your e-mail">
-                    <input class="form__client-tel form-fields__item" type="tel" name="tel" id="client_tel" placeholder="Phone number">
+                    <input class="form__client-name form-fields__item" type="text" id="name" name="client_name"
+                        placeholder="Your name">
+                    <input class="form__client-email form-fields__item" type="email" name="email" id="client_email"
+                        placeholder="Your e-mail">
+                    <input class="form__client-tel form-fields__item" type="tel" name="tel" id="client_tel"
+                        placeholder="Phone number">
                     <button class="form__btn" type="submit">Join now</button>
                 </form>
                 <div class="brochure-download__cross">
