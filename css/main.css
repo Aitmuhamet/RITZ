@@ -1,0 +1,340 @@
+@import url('fonts.css');
+
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    font-weight: 400;
+}
+
+*::before {
+    font-family: 'icons-brands';
+    font-weight: 400;
+}
+
+.whatsapp-btn::before {
+    content: '\f232';
+}
+
+.telegram-btn::before {
+    content: '\f1d8';
+    font-family: 'icons';
+    font-weight: 300;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+
+    /* -ms-overflow-style: none; */
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.page-content {
+    padding: 30px;
+}
+
+.page-bg,
+.page-bg-linear-gradient {
+    min-height: 100vh;
+    min-width: 100vw;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page-bg {
+    z-index: 1;
+}
+
+.page-bg-linear-gradient {
+    z-index: 2;
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, transparent, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.header {
+    position: absolute;
+    z-index: 10;
+
+    width: calc(100% - 60px);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.25);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__item {
+    border-right: 1px solid rgb(255, 255, 255, 0.25);
+    display: block;
+}
+
+.logo {
+    padding: 0 20px 10px 0;
+}
+
+.contacts {
+    display: flex;
+}
+
+.socials {
+    border-left: 1px solid rgb(255, 255, 255, 0.25);
+    padding: 10px 20px;
+}
+
+.whatsapp {
+    margin-right: 15px;
+}
+
+.phone {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+
+}
+
+.header__phone {
+    display: block;
+    padding: 11px 0 11px 15px;
+}
+
+.brochure-download {
+    position: absolute;
+    z-index: 20;
+    left: 80px;
+    bottom: calc(30px * 2 + (100% - 30px * 2) / 12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brochure-download-btn {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+    background: #000;
+    border: none;
+    padding: 7px 30px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.brochure-download-icon {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+/* при нажатии на кноку "DOWNLOAD BROCHURE -- start*/
+.brochure-download--bg {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+
+    background: rgba(0, 0, 0, 0.90);
+    backdrop-filter: blur(10px);
+}
+
+.brochure-download-btn--hidden {
+    display: none;
+}
+
+/* при нажатии на кноку "DOWNLOAD BROCHURE -- end*/
+
+.brochure-download__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    width: 914px;
+    height: 440px;
+
+    background: #000;
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.50);
+
+    position: relative;
+}
+
+.form-text {
+    padding: 40px 25px 80px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    background: url(../img/form-text-bg.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.form-text__title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Times New Roman";
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 100%;
+    /* 45px */
+    text-transform: capitalize;
+}
+
+.form-text__subtitle {
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+}
+
+.form-socials {
+    display: flex;
+}
+.form-socials__item:nth-child(1) {
+    margin-right: 30px;
+}
+
+.form-text__telegram,
+.form-text__whatsapp {
+    color: #F3F2EF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 210.2%;
+    /* 33.632px */
+
+    display: flex;
+    align-items: center;
+}
+
+.form-text__telegram svg,
+.form-text__whatsapp svg {
+    margin-right: 10px;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+
+    padding: 38px 30px 82px 30px;
+}
+
+.form-fields__item {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid rgba(145, 145, 145, 0.5);
+
+    padding-left: 15px;
+    padding-bottom: 13px;
+
+    margin-top: 44px;
+}
+.form__btn {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 144px;
+    margin-top: 30px;
+
+    cursor: pointer;
+}
+
+.brochure-download__cross {
+    position: absolute;
+    top: 0px;
+    right: -46px;
+
+    width: 38px;
+    height: 38px;
+
+    cursor: pointer;
+}
+.brochure-download__cross span {
+    display: block;
+    width: 30px;
+    height: 3px;
+
+    position: absolute;
+
+    background: rgba(243, 242, 239, 1);
+}
+.brochure-download__cross span:nth-child(1) {
+    transform: rotate(45deg);
+}
+.brochure-download__cross span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.brochure-download__form--hidden {
+    display: none;
+}
